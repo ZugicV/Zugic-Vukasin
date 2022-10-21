@@ -5,11 +5,11 @@ public class Circle {
     private double r;
     private boolean slected;
 
-    public double area(){
+    public double circleArea(){
 
         return this.r* this.r * Math.PI;
     }
-    public double circumference(){
+    public double circleCircumference(){
 
         return this.r*2* Math.PI;
     }
