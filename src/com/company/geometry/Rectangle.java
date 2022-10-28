@@ -4,7 +4,23 @@ public class Rectangle {
     private Point pocetak;
     private double a;
     private double b;
-    private boolean slected;
+    private boolean selected;
+
+    public Rectangle() {
+    }
+
+    public Rectangle(Point pocetak, double a, double b) {
+        this.pocetak = pocetak;
+        this.a = a;
+        this.b = b;
+    }
+
+    public Rectangle(Point pocetak, double a, double b, boolean slected) {
+        this.pocetak = pocetak;
+        this.a = a;
+        this.b = b;
+        this.selected = selected;
+    }
 
     public double rectangleArea(){
 
@@ -40,10 +56,10 @@ public class Rectangle {
     }
 
     public boolean isSlected() {
-        return slected;
+        return selected;
     }
 
     public void setSlected(boolean slected) {
-        this.slected = slected;
+        this.selected = slected;
     }
 }

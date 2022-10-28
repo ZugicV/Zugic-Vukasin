@@ -3,7 +3,21 @@ package com.company.geometry;
 public class Circle {
     private Point center;
     private double r;
-    private boolean slected;
+    private boolean selected;
+
+    public Circle() {
+    }
+
+    public Circle(Point center, double r) {
+        this.center = center;
+        this.r = r;
+    }
+
+    public Circle(Point center, double r, boolean selected) {
+        this.center = center;
+        this.r = r;
+        this.selected = selected;
+    }
 
     public double circleArea(){
 
@@ -30,11 +44,11 @@ public class Circle {
     }
 
     public boolean isSlected() {
-        return slected;
+        return selected;
     }
 
     public void setSlected(boolean slected) {
-        this.slected = slected;
+        this.selected = selected;
     }
 
 }

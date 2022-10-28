@@ -7,7 +7,8 @@ import com.company.geometry.Line;
 public class Main {
 
     public static void main(String[] args) {
-            Circle krug = new Circle();
-
+            Point tacka1 = new Point();
+            Point tacka2 = new Point(3,7);
+            Point tacka3 = new Point(3,7,true);
     }
 }
