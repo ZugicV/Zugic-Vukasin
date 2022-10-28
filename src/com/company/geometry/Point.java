@@ -8,6 +8,7 @@ public class Point {
     public Point() {
     }
 
+
     public Point(int prvaKoordinata, int drugaKoordinata) {
         this.x = prvaKoordinata;
         this.y = drugaKoordinata;
