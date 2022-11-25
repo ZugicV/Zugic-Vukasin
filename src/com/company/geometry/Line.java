@@ -22,6 +22,11 @@ public class Line {
     public double length(){
         return startPoint.distance(endPoint.getX(), endPoint.getY());
     }
+
+    public String toString(){
+        return startPoint+" "+endPoint+" "+selected;
+    }
+
     public Point getStartPoint() {
         return startPoint;
     }

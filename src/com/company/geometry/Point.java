@@ -9,20 +9,26 @@ public class Point {
     }
 
 
-    public Point(int prvaKoordinata, int drugaKoordinata) {
-        this.x = prvaKoordinata;
-        this.y = drugaKoordinata;
+    public Point(int XKoordinata, int YKoordinata) {
+        this.x = XKoordinata;
+        this.y = YKoordinata;
     }
 
-    public Point(int prvaKoordinata, int drugaKoordinata, boolean selected) {
-        this.x = prvaKoordinata;
-        this.y = drugaKoordinata;
+    public Point(int XKoordinata, int YKoordinata, boolean selected) {
+        this.x = XKoordinata;
+        this.y = YKoordinata;
         this.selected = selected;
     }
 
     public double distance(int x , int y){
         return Math.sqrt(((this.x - x)^2)+((this.y - y)^2));
     }
+
+    public String toString(){
+        return x+" "+y+" "+selected;
+    }
+
+
     public int getX() {
         return x;
     }

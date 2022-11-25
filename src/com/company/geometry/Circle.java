@@ -27,6 +27,10 @@ public class Circle {
 
         return this.r*2* Math.PI;
     }
+
+    public String toString(){
+        return center+" "+r+" "+selected;
+    }
     public Point getCenter() {
         return center;
     }
