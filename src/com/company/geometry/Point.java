@@ -24,8 +24,21 @@ public class Point {
         return Math.sqrt(((this.x - x)^2)+((this.y - y)^2));
     }
 
+
+    @Override //sluzi da se pregazi postojeca funkcija sa nekom novom koja se ozve isto i i=ima iste ulazne i izlazne poramaetre
     public String toString(){
-        return x+" "+y+" "+selected;
+        return "(" +x+ "," +y+ ")";
+    }
+
+    @Override
+    public boolean equals(Object obj){ //uzima objekat
+        if (obj instanceof Point){ //proverava da li je je
+            Point temp = (Point)obj;
+                    if(x == temp.x && y == temp.y){
+                        return true;
+                    }
+        }
+        return false;
     }
 
 

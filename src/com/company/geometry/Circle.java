@@ -29,8 +29,20 @@ public class Circle {
     }
 
     public String toString(){
-        return center+" "+r+" "+selected;
+        return "Center: "+center+", radius: "+r;
     }
+
+    @Override
+    public boolean equals(Object objC){
+        if (objC instanceof Circle){
+            Circle temp = (Circle)objC;
+            if(center.equals(temp.center) && r == temp.r){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public Point getCenter() {
         return center;
     }

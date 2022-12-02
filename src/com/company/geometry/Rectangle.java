@@ -2,8 +2,8 @@ package com.company.geometry;
 
 public class Rectangle {
     private Point pocetak;
-    private double a;
-    private double b;
+    private double width;
+    private double height;
     private boolean selected;
 
     public Rectangle() {
@@ -11,24 +11,24 @@ public class Rectangle {
 
     public Rectangle(Point pocetak, double a, double b) {
         this.pocetak = pocetak;
-        this.a = a;
-        this.b = b;
+        this.width = a;
+        this.height = b;
     }
 
     public Rectangle(Point pocetak, double a, double b, boolean slected) {
         this.pocetak = pocetak;
-        this.a = a;
-        this.b = b;
+        this.width = a;
+        this.height = b;
         this.selected = selected;
     }
 
     public double rectangleArea(){
 
-        return a*b;
+        return width * height;
     }
     public double rectangleCircumference(){
 
-        return 2*a + 2*b;
+        return 2* width + 2* height;
     }
 
 
@@ -40,20 +40,36 @@ public class Rectangle {
         this.pocetak = pocetak;
     }
 
-    public double getA() {
-        return a;
+    @Override
+    public String toString() {
+        return "Upper left point: "+ pocetak + "width: " + width + "height" + height;
     }
 
-    public void setA(double a) {
-        this.a = a;
+
+    @Override
+    public boolean equals(Object objR){
+        if (objR instanceof Rectangle){
+            Rectangle temp = (Rectangle)objR;
+            if(pocetak.equals(temp.pocetak) && width == temp.width && height == temp.height){
+                return true;
+            }
+        }
+        return false;
+    }
+    public double getWidth() {
+        return width;
     }
 
-    public double getB() {
-        return b;
+    public void setWidth(double width) {
+        this.width = width;
     }
 
-    public void setB(double b) {
-        this.b = b;
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     public boolean isSlected() {

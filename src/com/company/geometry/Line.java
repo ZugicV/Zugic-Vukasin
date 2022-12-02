@@ -23,10 +23,21 @@ public class Line {
         return startPoint.distance(endPoint.getX(), endPoint.getY());
     }
 
+    @Override
     public String toString(){
-        return startPoint+" "+endPoint+" "+selected;
+        return startPoint+"-->"+endPoint;
     }
 
+    @Override
+    public boolean equals(Object objL){
+        if (objL instanceof Line){
+            Line temp = (Line)objL;
+            if(startPoint.equals(temp.startPoint) && endPoint.equals(temp.endPoint)) {
+                return true;
+            }
+        }
+        return false;
+    }
     public Point getStartPoint() {
         return startPoint;
     }
