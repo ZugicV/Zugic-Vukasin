@@ -19,15 +19,15 @@ public class Circle {
         this.selected = selected;
     }
 
-    public double circleArea(){
+    public double area(){
 
         return this.r* this.r * Math.PI;
     }
-    public double circleCircumference(){
+    public double circumference(){
 
         return this.r*2* Math.PI;
     }
-
+    @Override
     public String toString(){
         return "Center: "+center+", radius: "+r;
     }
